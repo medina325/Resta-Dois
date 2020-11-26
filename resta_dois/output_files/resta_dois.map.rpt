@@ -1,0 +1,888 @@
+Analysis & Synthesis report for resta_dois
+Tue Nov 12 17:42:00 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 17:42:00 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; resta_dois                                      ;
+; Top-level Entity Name              ; resta_dois                                      ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 137                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; resta_dois         ; resta_dois         ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; resta_dois.vhd                   ; yes             ; User VHDL File  ; Z:/LabHard/Trab/resta_dois/resta_dois.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 137             ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; win_lose~output ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 137             ;
+; Average fan-out                             ; 0.50            ;
++---------------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |resta_dois                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 137  ; 0            ; |resta_dois         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |resta_dois|prox_est       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 12 17:41:56 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off resta_dois -c resta_dois
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file resta_dois.vhd
+    Info (12022): Found design unit 1: resta_dois-behaviour
+    Info (12023): Found entity 1: resta_dois
+Info (12127): Elaborating entity "resta_dois" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(107): signal "prox_est" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(104): inferring latch(es) for signal or variable "est_atual", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(120): signal "xi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(122): signal "xi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(124): signal "yi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(126): signal "yi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(47): object "d0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(47): object "d1" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(131): signal "xf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(133): signal "xf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(135): signal "yf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(137): signal "yf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(75): object "d2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(75): object "d3" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(114): inferring latch(es) for signal or variable "xi_aux", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(114): inferring latch(es) for signal or variable "yi_aux", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(114): inferring latch(es) for signal or variable "xf_aux", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(114): inferring latch(es) for signal or variable "yf_aux", which holds its previous value in one or more paths through the process
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(149): object "tabuleiro" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(167): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(167): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(167): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(167): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(169): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(169): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(169): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(169): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(171): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(171): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(171): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(171): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(173): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(173): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(173): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(173): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(189): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(189): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(189): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(189): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(205): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(205): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(205): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(205): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(221): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(221): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(221): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(221): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(237): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(237): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(237): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(237): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(253): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(253): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(253): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(253): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(255): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(255): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(255): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(255): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(271): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(271): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(271): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(271): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(273): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(273): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(273): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(273): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(289): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(289): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(289): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(289): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(291): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(291): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(291): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(291): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(307): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(307): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(307): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(307): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(309): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(309): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(309): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(309): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(325): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(325): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(325): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(325): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(327): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(327): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(327): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(327): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(343): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(343): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(343): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(343): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(345): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(345): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(345): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(345): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(361): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(361): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(361): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(361): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(363): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(363): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(363): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(363): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(379): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(379): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(379): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(379): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(381): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(381): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(381): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(381): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(397): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(397): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(397): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(397): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(399): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(399): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(399): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(399): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(415): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(415): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(415): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(415): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(417): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(417): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(417): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(417): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(433): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(433): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(433): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(433): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(435): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(435): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(435): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(435): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(451): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(451): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(451): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(451): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(453): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(453): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(453): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(453): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(37): object "d0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(37): object "d1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(37): object "d2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(37): object "d3" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(477): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(477): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(477): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(477): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(479): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(479): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(479): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(479): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(503): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(503): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(503): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(503): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(505): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(505): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(505): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(505): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(529): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(529): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(529): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(529): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(531): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(531): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(531): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(531): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(555): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(555): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(555): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(555): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(557): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(557): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(557): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(557): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(573): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(573): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(573): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(573): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(589): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(589): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(589): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(589): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(605): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(605): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(605): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(605): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(621): signal "xi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(621): signal "yi_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(621): signal "xf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resta_dois.vhd(621): signal "yf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(28): object "d0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(28): object "d1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(28): object "d2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at resta_dois.vhd(28): object "d3" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(148): inferring latch(es) for signal or variable "prox_est", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at resta_dois.vhd(148): inferring latch(es) for signal or variable "win_lose", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "win_lose" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N6D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N6C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N6B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N6A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N5D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N5C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N5B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N5A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4H" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4G" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4F" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4E" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N4A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3H" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3G" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3F" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3E" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N3A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N2D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N2C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N2B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N2A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N1D" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N1C" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N1B" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.N1A" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "prox_est.I" at resta_dois.vhd(148)
+Info (10041): Inferred latch for "yf_aux[0]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[1]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[2]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[3]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[4]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[5]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[6]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[7]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[8]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[9]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[10]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[11]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[12]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[13]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[14]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[15]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[16]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[17]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[18]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[19]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[20]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[21]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[22]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[23]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[24]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[25]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[26]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[27]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[28]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[29]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yf_aux[30]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[0]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[1]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[2]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[3]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[4]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[5]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[6]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[7]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[8]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[9]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[10]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[11]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[12]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[13]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[14]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[15]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[16]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[17]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[18]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[19]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[20]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[21]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[22]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[23]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[24]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[25]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[26]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[27]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[28]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[29]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xf_aux[30]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[0]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[1]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[2]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[3]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[4]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[5]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[6]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[7]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[8]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[9]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[10]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[11]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[12]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[13]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[14]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[15]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[16]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[17]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[18]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[19]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[20]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[21]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[22]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[23]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[24]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[25]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[26]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[27]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[28]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[29]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "yi_aux[30]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[0]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[1]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[2]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[3]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[4]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[5]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[6]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[7]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[8]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[9]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[10]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[11]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[12]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[13]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[14]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[15]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[16]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[17]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[18]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[19]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[20]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[21]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[22]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[23]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[24]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[25]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[26]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[27]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[28]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[29]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "xi_aux[30]" at resta_dois.vhd(114)
+Info (10041): Inferred latch for "est_atual.N6D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N6C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N6B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N6A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N5D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N5C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N5B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N5A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4H" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4G" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4F" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4E" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N4A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3H" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3G" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3F" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3E" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N3A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N2D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N2C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N2B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N2A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N1D" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N1C" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N1B" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.N1A" at resta_dois.vhd(104)
+Info (10041): Inferred latch for "est_atual.I" at resta_dois.vhd(104)
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "p1:tabuleiro" into its bus
+Warning (14025): LATCH primitive "yf_aux[24]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[23]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[22]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[21]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[20]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[19]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[18]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[17]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[16]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[15]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[14]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[13]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[12]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[11]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[10]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[9]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[8]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[7]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[6]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[5]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[4]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[3]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[2]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[1]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[0]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[26]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[27]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[28]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[29]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[30]" is permanently disabled
+Warning (14025): LATCH primitive "yf_aux[25]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[0]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[1]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[2]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[3]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[4]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[5]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[6]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[7]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[8]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[9]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[10]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[11]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[12]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[13]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[14]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[15]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[16]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[17]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[18]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[19]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[20]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[21]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[22]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[23]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[24]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[25]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[26]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[27]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[28]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[29]" is permanently disabled
+Warning (14025): LATCH primitive "yi_aux[30]" is permanently disabled
+Warning (14026): LATCH primitive "prox_est.N5D_2290" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N5C_2298" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N5B_2306" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N5A_2314" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N4H_2322" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N4F_2338" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N4D_2354" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N4B_2370" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3H_2386" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3G_2394" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3F_2402" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3E_2410" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3D_2418" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3C_2426" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3B_2434" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N3A_2442" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N2D_2450" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N2C_2458" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N2B_2466" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N2A_2474" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N1D_2482" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N1C_2490" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N1B_2498" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.N1A_2506" is permanently enabled
+Warning (14026): LATCH primitive "prox_est.I_2514" is permanently enabled
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "win_lose" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 136 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "reset"
+    Warning (15610): No output dependent on input pin "push_buttonI"
+    Warning (15610): No output dependent on input pin "push_buttonF"
+    Warning (15610): No output dependent on input pin "yf[0]"
+    Warning (15610): No output dependent on input pin "yf[1]"
+    Warning (15610): No output dependent on input pin "yf[2]"
+    Warning (15610): No output dependent on input pin "yf[3]"
+    Warning (15610): No output dependent on input pin "yf[4]"
+    Warning (15610): No output dependent on input pin "yf[5]"
+    Warning (15610): No output dependent on input pin "yf[6]"
+    Warning (15610): No output dependent on input pin "yf[7]"
+    Warning (15610): No output dependent on input pin "yf[8]"
+    Warning (15610): No output dependent on input pin "yf[9]"
+    Warning (15610): No output dependent on input pin "yf[10]"
+    Warning (15610): No output dependent on input pin "yf[11]"
+    Warning (15610): No output dependent on input pin "yf[12]"
+    Warning (15610): No output dependent on input pin "yf[13]"
+    Warning (15610): No output dependent on input pin "yf[14]"
+    Warning (15610): No output dependent on input pin "yf[15]"
+    Warning (15610): No output dependent on input pin "yf[16]"
+    Warning (15610): No output dependent on input pin "yf[17]"
+    Warning (15610): No output dependent on input pin "yf[18]"
+    Warning (15610): No output dependent on input pin "yf[19]"
+    Warning (15610): No output dependent on input pin "yf[20]"
+    Warning (15610): No output dependent on input pin "yf[21]"
+    Warning (15610): No output dependent on input pin "yf[22]"
+    Warning (15610): No output dependent on input pin "yf[23]"
+    Warning (15610): No output dependent on input pin "yf[24]"
+    Warning (15610): No output dependent on input pin "yf[25]"
+    Warning (15610): No output dependent on input pin "yf[26]"
+    Warning (15610): No output dependent on input pin "yf[27]"
+    Warning (15610): No output dependent on input pin "yf[28]"
+    Warning (15610): No output dependent on input pin "yf[29]"
+    Warning (15610): No output dependent on input pin "yf[30]"
+    Warning (15610): No output dependent on input pin "sw3"
+    Warning (15610): No output dependent on input pin "sw2"
+    Warning (15610): No output dependent on input pin "sw1"
+    Warning (15610): No output dependent on input pin "sw0"
+    Warning (15610): No output dependent on input pin "sw7"
+    Warning (15610): No output dependent on input pin "sw6"
+    Warning (15610): No output dependent on input pin "sw5"
+    Warning (15610): No output dependent on input pin "sw4"
+    Warning (15610): No output dependent on input pin "xi[0]"
+    Warning (15610): No output dependent on input pin "xi[1]"
+    Warning (15610): No output dependent on input pin "xi[2]"
+    Warning (15610): No output dependent on input pin "xi[3]"
+    Warning (15610): No output dependent on input pin "xi[4]"
+    Warning (15610): No output dependent on input pin "xi[5]"
+    Warning (15610): No output dependent on input pin "xi[6]"
+    Warning (15610): No output dependent on input pin "xi[7]"
+    Warning (15610): No output dependent on input pin "xi[8]"
+    Warning (15610): No output dependent on input pin "xi[9]"
+    Warning (15610): No output dependent on input pin "xi[10]"
+    Warning (15610): No output dependent on input pin "xi[11]"
+    Warning (15610): No output dependent on input pin "xi[12]"
+    Warning (15610): No output dependent on input pin "xi[13]"
+    Warning (15610): No output dependent on input pin "xi[14]"
+    Warning (15610): No output dependent on input pin "xi[15]"
+    Warning (15610): No output dependent on input pin "xi[16]"
+    Warning (15610): No output dependent on input pin "xi[17]"
+    Warning (15610): No output dependent on input pin "xi[18]"
+    Warning (15610): No output dependent on input pin "xi[19]"
+    Warning (15610): No output dependent on input pin "xi[20]"
+    Warning (15610): No output dependent on input pin "xi[21]"
+    Warning (15610): No output dependent on input pin "xi[22]"
+    Warning (15610): No output dependent on input pin "xi[23]"
+    Warning (15610): No output dependent on input pin "xi[24]"
+    Warning (15610): No output dependent on input pin "xi[25]"
+    Warning (15610): No output dependent on input pin "xi[26]"
+    Warning (15610): No output dependent on input pin "xi[27]"
+    Warning (15610): No output dependent on input pin "xi[28]"
+    Warning (15610): No output dependent on input pin "xi[29]"
+    Warning (15610): No output dependent on input pin "xi[30]"
+    Warning (15610): No output dependent on input pin "xf[0]"
+    Warning (15610): No output dependent on input pin "xf[1]"
+    Warning (15610): No output dependent on input pin "xf[2]"
+    Warning (15610): No output dependent on input pin "xf[3]"
+    Warning (15610): No output dependent on input pin "xf[4]"
+    Warning (15610): No output dependent on input pin "xf[5]"
+    Warning (15610): No output dependent on input pin "xf[6]"
+    Warning (15610): No output dependent on input pin "xf[7]"
+    Warning (15610): No output dependent on input pin "xf[8]"
+    Warning (15610): No output dependent on input pin "xf[9]"
+    Warning (15610): No output dependent on input pin "xf[10]"
+    Warning (15610): No output dependent on input pin "xf[11]"
+    Warning (15610): No output dependent on input pin "xf[12]"
+    Warning (15610): No output dependent on input pin "xf[13]"
+    Warning (15610): No output dependent on input pin "xf[14]"
+    Warning (15610): No output dependent on input pin "xf[15]"
+    Warning (15610): No output dependent on input pin "xf[16]"
+    Warning (15610): No output dependent on input pin "xf[17]"
+    Warning (15610): No output dependent on input pin "xf[18]"
+    Warning (15610): No output dependent on input pin "xf[19]"
+    Warning (15610): No output dependent on input pin "xf[20]"
+    Warning (15610): No output dependent on input pin "xf[21]"
+    Warning (15610): No output dependent on input pin "xf[22]"
+    Warning (15610): No output dependent on input pin "xf[23]"
+    Warning (15610): No output dependent on input pin "xf[24]"
+    Warning (15610): No output dependent on input pin "xf[25]"
+    Warning (15610): No output dependent on input pin "xf[26]"
+    Warning (15610): No output dependent on input pin "xf[27]"
+    Warning (15610): No output dependent on input pin "xf[28]"
+    Warning (15610): No output dependent on input pin "xf[29]"
+    Warning (15610): No output dependent on input pin "xf[30]"
+    Warning (15610): No output dependent on input pin "yi[0]"
+    Warning (15610): No output dependent on input pin "yi[1]"
+    Warning (15610): No output dependent on input pin "yi[2]"
+    Warning (15610): No output dependent on input pin "yi[3]"
+    Warning (15610): No output dependent on input pin "yi[4]"
+    Warning (15610): No output dependent on input pin "yi[5]"
+    Warning (15610): No output dependent on input pin "yi[6]"
+    Warning (15610): No output dependent on input pin "yi[7]"
+    Warning (15610): No output dependent on input pin "yi[8]"
+    Warning (15610): No output dependent on input pin "yi[9]"
+    Warning (15610): No output dependent on input pin "yi[10]"
+    Warning (15610): No output dependent on input pin "yi[11]"
+    Warning (15610): No output dependent on input pin "yi[12]"
+    Warning (15610): No output dependent on input pin "yi[13]"
+    Warning (15610): No output dependent on input pin "yi[14]"
+    Warning (15610): No output dependent on input pin "yi[15]"
+    Warning (15610): No output dependent on input pin "yi[16]"
+    Warning (15610): No output dependent on input pin "yi[17]"
+    Warning (15610): No output dependent on input pin "yi[18]"
+    Warning (15610): No output dependent on input pin "yi[19]"
+    Warning (15610): No output dependent on input pin "yi[20]"
+    Warning (15610): No output dependent on input pin "yi[21]"
+    Warning (15610): No output dependent on input pin "yi[22]"
+    Warning (15610): No output dependent on input pin "yi[23]"
+    Warning (15610): No output dependent on input pin "yi[24]"
+    Warning (15610): No output dependent on input pin "yi[25]"
+    Warning (15610): No output dependent on input pin "yi[26]"
+    Warning (15610): No output dependent on input pin "yi[27]"
+    Warning (15610): No output dependent on input pin "yi[28]"
+    Warning (15610): No output dependent on input pin "yi[29]"
+    Warning (15610): No output dependent on input pin "yi[30]"
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 136 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 432 warnings
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Tue Nov 12 17:42:00 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+
