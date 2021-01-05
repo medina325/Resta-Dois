@@ -18,8 +18,7 @@
 
 > Para mover uma peça é necessário definir com as coordenadas iniciais e finais de uma dada jogada (como dito antes mais detalhes no pdf que descreve o projeto).
 
-> Obviamente, o estado final do tabuleiro poderá ser apenas dois: vitória ou derrota, dependendo da quantidade de peças remanescentes no tabuleiro.
-
+> Obviamente, o estado final do tabuleiro poderá ser apenas dois: vitória ou derrota, dependendo da quantidade de peças remanescentes no tabuleiro. Sendo que ambas mensagens de vitória ou derrota são informadas pelo display de 7 segmentos como mostrado abaixo.
 <p align="center">
   <img id="cyclone" width="100" height="50" src="https://github.com/medina325/Resta-Dois/blob/main/images/win_display.jpg?raw=true" alt="win_display">
 </p>
