@@ -20,12 +20,12 @@
 
 > Obviamente, o estado final do tabuleiro poderá ser apenas dois: vitória ou derrota, dependendo da quantidade de peças remanescentes no tabuleiro. Sendo que ambas mensagens de vitória ou derrota são informadas pelo display de 7 segmentos como mostrado abaixo.
 
-### Vitória :D
+<h3 align="center">Vitória :D</h3>
 <p align="center">
   <img id="cyclone" width="100" height="50" src="https://github.com/medina325/Resta-Dois/blob/main/images/win_display.jpg?raw=true" alt="win_display">
 </p>
 
-### Derrota :(
+<h3 align="center">Derrota :(</h3>
 <p align="center">
   <img id="cyclone" width="100" height="50" src="https://github.com/medina325/Resta-Dois/blob/main/images/lose_display.jpg?raw=true" alt="lose_display">
 </p>
