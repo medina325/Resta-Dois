@@ -20,7 +20,7 @@ architecture behaviour of resta_dois is
 					  N5A,N5B,N5C,N5D,
 					  N6A,N6B,N6C,N6D);
 							
-	signal est_atual, prox_est: States ;				   --http://quitoart.blogspot.com/2017/07/vhdl-ps2-keyboard-hyperterminal.html  (teclado ps2d)
+	signal est_atual, prox_est: States ;	--http://quitoart.blogspot.com/2017/07/vhdl-ps2-keyboard-hyperterminal.html  (teclado ps2d)
 
 	signal xi_aux, yi_aux, xf_aux, yf_aux : natural;
 		
