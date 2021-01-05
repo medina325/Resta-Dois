@@ -1,7 +1,7 @@
 # Resta-Dois
 > O Resta Dois é um jogo muito parecido com seu primo Resta Um, porém o objetivo é fazer sobrar duas peças no tabuleiro ao invés de apenas uma. Todos detalhes de implementação estão no pdf contido nesse mesmo repositório. Este README consiste apenas em uma pequena ilustração do projeto.
 
-# Regras do jogo
+## Regras do jogo
 > O tabuleiro do jogo consiste em um cruz que começa com uma posição vazia no centro.
 
 <p align="center">
@@ -19,10 +19,13 @@
 > Para mover uma peça é necessário definir com as coordenadas iniciais e finais de uma dada jogada (como dito antes mais detalhes no pdf que descreve o projeto).
 
 > Obviamente, o estado final do tabuleiro poderá ser apenas dois: vitória ou derrota, dependendo da quantidade de peças remanescentes no tabuleiro. Sendo que ambas mensagens de vitória ou derrota são informadas pelo display de 7 segmentos como mostrado abaixo.
+
+### Vitória :D
 <p align="center">
   <img id="cyclone" width="100" height="50" src="https://github.com/medina325/Resta-Dois/blob/main/images/win_display.jpg?raw=true" alt="win_display">
 </p>
 
+### Derrota :(
 <p align="center">
   <img id="cyclone" width="100" height="50" src="https://github.com/medina325/Resta-Dois/blob/main/images/lose_display.jpg?raw=true" alt="lose_display">
 </p>
