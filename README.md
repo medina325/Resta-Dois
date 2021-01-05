@@ -23,12 +23,12 @@
 ---
 <style>
     img {
-        height: 50px;
+        height: 20px;
         display: block;
         margin-left: auto;
         margin-right:auto;
     }
     #cyclone {
-        height: 200px;
+        height: 100px;
     }
 </style>
