@@ -5,7 +5,7 @@
 > O tabuleiro do jogo consiste em um cruz que começa com uma posição vazia no centro.
 
 <p align="center">
-  <img width="250" height="300" src="https://github.com/medina325/Resta-Dois/blob/main/images/tabuleiro.jpg?raw=true" alt="tabuleiro">
+  <img width="280" height="300" src="https://github.com/medina325/Resta-Dois/blob/main/images/tabuleiro.jpg?raw=true" alt="tabuleiro">
 </p>
 
 > Assim como o jogo de dama, para eliminar uma peça do tabuleiro deve-se saltar sobre ela, logo sempre há 4 possibilidades no início do jogo: saltar a peça da esquerda para direita, da direita para esquerda, de cima para baixo ou de baixo para cima.
