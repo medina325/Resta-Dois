@@ -21,9 +21,9 @@
 > Obviamente, o estado final do tabuleiro poderá ser apenas dois: vitória ou derrota, dependendo da quantidade de peças remanescentes no tabuleiro.
 
 <p align="center">
-  <img id="cyclone" width="460" height="360" src="https://github.com/medina325/Resta-Dois/blob/main/images/win_display.jpg?raw=true" alt="win_display">
+  <img id="cyclone" width="100" height="100" src="https://github.com/medina325/Resta-Dois/blob/main/images/win_display.jpg?raw=true" alt="win_display">
 </p>
 
 <p align="center">
-  <img id="cyclone" width="460" height="360" src="https://github.com/medina325/Resta-Dois/blob/main/images/lose_display.jpg?raw=true" alt="lose_display">
+  <img id="cyclone" width="200" height="200" src="https://github.com/medina325/Resta-Dois/blob/main/images/lose_display.jpg?raw=true" alt="lose_display">
 </p>
